@@ -104,8 +104,8 @@ export const Favorite = () => {
     <div className="food-cont">
     <div className="sort">
                         <div>
-                        <FormControl sx={{  minWidth: 120 }} size="small">
-                            <InputLabel id="demo-select-small">Filter</InputLabel>
+                        <FormControl sx={{  minWidth: 150 }} size="small">
+                            <InputLabel id="demo-select-small">Filter Creater</InputLabel>
                             <Select
                             labelId="demo-select-small"
                             id="demo-select-small"

@@ -1,12 +1,9 @@
 .detail_container{
 
-    width: 100%;
-
+    width: 60%;
     margin: auto;
     margin-top: 150px;
     padding: 20px;
-
-
 }
 
 .heading{
@@ -15,20 +12,48 @@
 }
 
 
-.detail_div{
-
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+td {
+    padding: 10px;
+    border: 1px solid rgb(202, 202, 202);
+    border-spacing: none;
+}
+tr {
+    border: none;
+    width: 400px !important;
 }
 
-.detail_div > div {
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    text-align: left;
-    padding: 30px;
+#table-cont {
+    width: 400px !important;
+    border: 1px solid rgb(202, 202, 202);
+    /* margin: auto; */
+    margin-top: 30px;
+    /* position: relative; */
+
+}
+@media(max-width: 574px) {
+    .detail_container{
+
+        width: 90%;
+        margin: auto;
+        margin-top: 150px;
+        padding: 20px;
+    }
+    table {
+        width: 200px !important;
+        border: 1px solid rgb(202, 202, 202);
+        /* margin: auto; */
+        margin-top: 30px;
+        /* position: relative; */
+    }
+    #table-cont {
+        width: 200px !important;
+        border: 1px solid rgb(202, 202, 202);
+        /* margin: auto; */
+        margin-top: 30px;
+        /* position: relative; */
     
+    }
 }
-
 .spinner_div{
     margin: auto;
     width: 100%;

@@ -78,10 +78,11 @@ export const Navbar = () => {
           >
            TheFoodList
           </Typography>
-          <IconButton size="large" aria-label="search" color="inherit">
+
+           <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
+           <IconButton size="large" aria-label="search" color="inherit" className="searchIcon">
             <SearchIcon />
           </IconButton>
-           <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"

@@ -73,8 +73,8 @@ hr{
     }
     .items > div:nth-child(2) {
         height: 100% ;
-        width:60%;
-        overflow-y: scroll;
+        width:50%;
+        overflow-y: auto;
 
     }
     .items > div:nth-child(3) {
