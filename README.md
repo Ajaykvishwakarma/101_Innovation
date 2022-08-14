@@ -21,6 +21,7 @@ GET Food Data :- https://innovationer.herokuapp.com/foods
 POST Favorite Data :- https://innovationer.herokuapp.com/favorites
 
 GET Data By ID for food :- https://innovationer.herokuapp.com/food/62d1d93aadc0d1517b08ca34
+
 GET Data By ID for favorite :- https://innovationer.herokuapp.com/favorite/62d1d93aadc0d1517b08ca34
 
 
