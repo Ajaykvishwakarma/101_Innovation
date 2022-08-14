@@ -1,0 +1,122 @@
+.food-cont{
+    width: 70% !important;
+    min-height: 400px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 40px;
+}
+
+
+.sort {
+      width: 80%;
+      height: 50px;
+      margin: auto;
+      margin-bottom: 20px;
+      justify-content: space-between;
+      display: flex;
+}
+.food-items{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.items{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+.items > div:nth-child(1) {
+    height: 100% ;
+    width:20%;
+}
+.items > div:nth-child(2) {
+    height: 100% ;
+    width:60%;
+}
+.items > div:nth-child(3) {
+    height: 100% ;
+    width:20%;
+}
+
+.food-items-img{
+    width: 80%;
+    height: 80%;
+    
+    margin: auto;
+    margin-top: 10px;
+}
+ h4 {
+    padding-top: 30px;
+    margin-top: 20px;
+    padding-bottom:5px ;
+}
+hr{
+    width: 100px;
+    margin: auto;
+}
+
+@media(max-width: 767px){
+   
+    .food-cont{
+
+        width: 99% !important;
+        min-height: 400px;
+        margin: auto;
+        margin-top: 150px;
+    }
+    .items > div:nth-child(1) {
+        height: 100% ;
+        width:25%;
+    }
+    .items > div:nth-child(2) {
+        height: 100% ;
+        width:60%;
+        overflow-y: scroll;
+
+    }
+    .items > div:nth-child(3) {
+        height: 100% ;
+        width:15%;
+    }
+
+  }
+@media(max-width: 574px){
+    .food-cont{
+
+        width: 99% !important;
+        min-height: 400px;
+        margin: auto;
+        margin-top: 150px;
+    }
+  
+  }
+
+.pagination {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #6b8e85;;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+  .spinner_div{
+      margin: auto;
+      width: 100%;
+      padding-top: 300px;
+      text-align: center;
+  }
