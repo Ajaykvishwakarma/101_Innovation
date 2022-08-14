@@ -6,15 +6,15 @@ import { perticularData } from "../../Redux/action"
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Details.css';
 export const Details = () => {
-    const navigate = useNavigate()
  
     const { id } = useParams()
-    // console.log(id)
+   
     const dispatch = useDispatch()
+
+    // FETCHing data from favorites
 
     const baseUrl = `https://innovationer.herokuapp.com`
     const { PertiData, loading } = useSelector((store) => store)
@@ -24,11 +24,10 @@ export const Details = () => {
     },[])
 
 
-
-
+    // Adding DAta to Favorite
     const addHandle = ()  =>  {
         
-           axios.post(`${baseUrl}/favorite`,{
+        axios.post(`${baseUrl}/favorite`,{
             _id : PertiData._id,
             code: PertiData.code,
             url: PertiData.url,
@@ -64,7 +63,6 @@ export const Details = () => {
         }
 
 
-console.log(PertiData?._id)
     return loading ? (
         <>
        

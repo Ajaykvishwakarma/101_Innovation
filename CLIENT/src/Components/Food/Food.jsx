@@ -30,18 +30,21 @@ export const Food = () => {
     const { dataObj, loading } = useSelector((store) => store)
     const baseUrl = 'https://innovationer.herokuapp.com';
 
-
+ // fetch all Favorite data
     useEffect(() => {
         handleChange(1);
         let url = `${baseUrl}/foods`
         dispatch(fetchData(url))
     },[]);
 
+
+     // Delete data
     const handleDelete = (id) => {
         let url = `${baseUrl}/food/${id}`
         dispatch(deleteData(url))
     }
    
+     // Pagination 
     async function pageChange(page) {
         setCurrPage(page)
         let url = `${baseUrl}/foods?page=${page}`
@@ -51,6 +54,7 @@ export const Food = () => {
 
     const [sort, setSort] = React.useState('');
   
+    // Sort the data acoording to energy_100g
     const handleChange2 = (event) => {
       setSort(event.target.value);
     };
@@ -73,6 +77,9 @@ export const Food = () => {
      
         
     },[filter])
+
+      // Filter the data according to creater
+      
     async function filterBtn(filter) {
  
         if(filter.length === 0) {

@@ -7,7 +7,7 @@ import { PageContext } from "../../context/PageContext";
 import '../Food/Food.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { fetchData, deleteData } from '../../Redux/action';
+import { fetchData, deleteFavData } from '../../Redux/action';
 import Pagination from '@mui/material/Pagination';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -20,8 +20,6 @@ import { Link } from "react-router-dom";
 export const Favorite = () => {
 
     const {handleChange} = useContext(PageContext);
-   
-    
 
     const navigate = useNavigate()
     const [currPage, setCurrPage] = useState(1)
@@ -33,17 +31,22 @@ export const Favorite = () => {
     const baseUrl = 'https://innovationer.herokuapp.com';
 
 
+    // fetch all Favorite data
+
     useEffect(() => {
         handleChange(2);
         let url = `${baseUrl}/favorites`
         dispatch(fetchData(url))
     },[]);
 
+    // Delete data
+
     const handleDelete = (id) => {
         let url = `${baseUrl}/favorite/${id}`
-        dispatch(deleteData(url))
+        dispatch(deleteFavData(url))
     }
    
+    // Pagination 
     async function pageChange(page) {
         setCurrPage(page)
         let url = `${baseUrl}/favorites?page=${page}`
@@ -60,6 +63,7 @@ export const Favorite = () => {
         sortBtn(sort)
     },[sort])
 
+    // Sort the data acoording to energy_100g
     async function sortBtn(sort) {
         let url = `${baseUrl}/favorites?q=sort&sort=${sort}`
         dispatch(fetchData(url))
@@ -75,6 +79,9 @@ export const Favorite = () => {
      
         
     },[filter])
+
+
+    // Filter the data according to creater
     async function filterBtn(filter) {
  
         if(filter.length === 0) {
